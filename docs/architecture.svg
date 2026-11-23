@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1270" viewBox="0 0 1800 1270" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#37474F"/>
+    </marker>
+    <marker id="ahd" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#78909C"/>
+    </marker>
+    <style>
+      .h1 { font-size: 34px; font-weight: 700; fill: #1B5E20; }
+      .sub { font-size: 16px; fill: #546E7A; }
+      .tier { font-size: 13px; font-weight: 700; letter-spacing: 2px; fill: #90A4AE; }
+      .t { font-size: 20px; font-weight: 700; fill: #263238; }
+      .st { font-size: 13px; fill: #607D8B; }
+      .b { font-size: 15px; font-weight: 700; fill: #37474F; }
+      .p { font-size: 14px; fill: #455A64; }
+      .p13 { font-size: 13px; fill: #455A64; }
+      .lbl { font-size: 13px; fill: #37474F; }
+      .badge { font-size: 11px; font-weight: 700; fill: #ffffff; letter-spacing: 1px; }
+      .solid { stroke: #37474F; stroke-width: 2.5; fill: none; }
+      .dash { stroke: #78909C; stroke-width: 2.5; fill: none; stroke-dasharray: 9 7; }
+    </style>
+  </defs>
+
+  <rect width="1800" height="1270" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="60" y="52" class="h1">EcoLoop — System Architecture</text>
+  <text x="60" y="80" class="sub">Mobile app (Expo) · Firebase · Flask AI backend · Node server · Gemini · Supabase · AWS S3</text>
+
+  <!-- ===================== TIER 1: CLIENT ===================== -->
+  <text x="60" y="110" class="tier">CLIENT</text>
+  <rect x="60" y="120" width="1680" height="300" rx="18" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2.5"/>
+  <text x="80" y="153" class="t">EcoLoop mobile app  (EcoLoop/)</text>
+  <text x="400" y="153" class="st">Expo 54 · React Native 0.81 · expo-router (file-based tabs) · NativeWind · TypeScript</text>
+
+  <!-- feature chips -->
+  <g>
+    <rect x="80" y="172" width="218" height="82" rx="12" fill="#fff" stroke="#66BB6A" stroke-width="2"/>
+    <text x="96" y="200" class="b">Auth &amp; Onboarding</text>
+    <text x="96" y="222" class="p13">Login · register · intro</text>
+    <text x="96" y="240" class="p13">Firebase email auth</text>
+
+    <rect x="317" y="172" width="218" height="82" rx="12" fill="#fff" stroke="#66BB6A" stroke-width="2"/>
+    <text x="333" y="200" class="b">Home</text>
+    <text x="333" y="222" class="p13">Placeholder screen</text>
+    <text x="333" y="240" class="p13">(not built yet)</text>
+
+    <rect x="554" y="172" width="218" height="82" rx="12" fill="#fff" stroke="#66BB6A" stroke-width="2"/>
+    <text x="570" y="200" class="b">Education Hub</text>
+    <text x="570" y="222" class="p13">Eco blog: read · like · write</text>
+    <text x="570" y="240" class="p13">AI chatbot assistant</text>
+
+    <rect x="791" y="172" width="218" height="82" rx="12" fill="#fff" stroke="#66BB6A" stroke-width="2"/>
+    <text x="807" y="200" class="b">Donate / Sell</text>
+    <text x="807" y="222" class="p13">Listings from your items</text>
+    <text x="807" y="240" class="p13">Category &amp; price filters</text>
+
+    <rect x="1028" y="172" width="218" height="82" rx="12" fill="#fff" stroke="#66BB6A" stroke-width="2"/>
+    <text x="1044" y="200" class="b">Lifecycle Tracking</text>
+    <text x="1044" y="222" class="p13">5-step add-item wizard</text>
+    <text x="1044" y="240" class="p13">QR · warranty · reminders</text>
+
+    <rect x="1265" y="172" width="218" height="82" rx="12" fill="#fff" stroke="#66BB6A" stroke-width="2"/>
+    <text x="1281" y="200" class="b">Repair &amp; Recycle</text>
+    <text x="1281" y="222" class="p13">Map + list of shops</text>
+    <text x="1281" y="240" class="p13">Search · filters · saved</text>
+
+    <rect x="1502" y="172" width="218" height="82" rx="12" fill="#fff" stroke="#66BB6A" stroke-width="2"/>
+    <text x="1518" y="200" class="b">Profile</text>
+    <text x="1518" y="222" class="p13">Edit details &amp; photo</text>
+    <text x="1518" y="240" class="p13">Sign out</text>
+  </g>
+
+  <!-- plumbing -->
+  <g>
+    <rect x="80" y="278" width="395" height="122" rx="12" fill="#C8E6C9" stroke="#43A047" stroke-width="2"/>
+    <text x="96" y="306" class="b">Firebase JS SDK</text>
+    <text x="96" y="329" class="p13">Auth session (AsyncStorage persisted)</text>
+    <text x="96" y="347" class="p13">Firestore reads/writes + live listeners</text>
+    <text x="96" y="365" class="p13">Storage uploads (photos, documents)</text>
+
+    <rect x="495" y="278" width="395" height="122" rx="12" fill="#C8E6C9" stroke="#43A047" stroke-width="2"/>
+    <text x="511" y="306" class="b">Device features</text>
+    <text x="511" y="329" class="p13">expo-notifications: local reminders</text>
+    <text x="511" y="347" class="p13">expo-camera: scan item QR codes</text>
+    <text x="511" y="365" class="p13">expo-location · react-native-maps · QR share</text>
+
+    <rect x="915" y="278" width="395" height="122" rx="12" fill="#C8E6C9" stroke="#43A047" stroke-width="2"/>
+    <text x="931" y="306" class="b">HTTP clients</text>
+    <text x="931" y="329" class="p13">fetch  →  Flask  (posts, chatbot)</text>
+    <text x="931" y="347" class="p13">axios + Firebase ID token  →  Node server</text>
+    <text x="931" y="365" class="p13">Base URL from env, LAN IP fallback</text>
+
+    <rect x="1335" y="278" width="385" height="122" rx="12" fill="#C8E6C9" stroke="#43A047" stroke-width="2"/>
+    <text x="1351" y="306" class="b">State &amp; forms</text>
+    <text x="1351" y="329" class="p13">TanStack Query: caching &amp; refetch</text>
+    <text x="1351" y="347" class="p13">react-hook-form + zod validation</text>
+    <text x="1351" y="365" class="p13">NativeWind (Tailwind) styling</text>
+  </g>
+
+  <!-- ===================== ARROWS CLIENT -> BACKENDS ===================== -->
+  <line x1="277" y1="400" x2="277" y2="558" class="solid" marker-end="url(#ah)"/>
+  <text x="291" y="470" class="lbl" font-weight="700">Direct SDK calls</text>
+  <text x="291" y="488" class="lbl">Auth · Firestore · Storage</text>
+
+  <line x1="940" y1="400" x2="940" y2="558" class="dash" marker-end="url(#ahd)"/>
+  <text x="926" y="470" class="lbl" text-anchor="end" font-weight="700">axios + Firebase ID token</text>
+  <text x="926" y="488" class="lbl" text-anchor="end">built, not used by screens yet</text>
+
+  <line x1="1200" y1="400" x2="1200" y2="558" class="solid" marker-end="url(#ah)"/>
+  <text x="1214" y="466" class="lbl" font-weight="700">HTTPS REST (JSON / multipart)</text>
+  <text x="1214" y="484" class="lbl">Authorization: Bearer shared secret</text>
+  <text x="1214" y="502" class="lbl">posts · likes · chat</text>
+
+  <!-- ===================== TIER 2: BACKENDS ===================== -->
+  <text x="60" y="546" class="tier">BACKEND SERVICES</text>
+
+  <!-- Firebase -->
+  <rect x="60" y="560" width="400" height="300" rx="16" fill="#FFF3E0" stroke="#EF6C00" stroke-width="2.5"/>
+  <text x="80" y="594" class="t">Firebase  (Google)</text>
+  <text x="80" y="616" class="st">Backend-as-a-service, used directly by the app</text>
+  <text x="80" y="655" class="b">Authentication</text>
+  <text x="80" y="675" class="p">Email sign-in, persistent session, ID tokens</text>
+  <text x="80" y="711" class="b">Cloud Firestore</text>
+  <text x="80" y="731" class="p">users · items · items_public_tokens</text>
+  <text x="80" y="751" class="p">listings · shops · user_saved_shops</text>
+  <text x="80" y="787" class="b">Cloud Storage</text>
+  <text x="80" y="807" class="p">Item photos and warranty documents</text>
+
+  <!-- Node -->
+  <rect x="540" y="560" width="420" height="300" rx="16" fill="#E3F2FD" stroke="#1565C0" stroke-width="2.5"/>
+  <text x="560" y="594" class="t">Node.js · Express 5  (server/)</text>
+  <rect x="850" y="578" width="90" height="22" rx="11" fill="#78909C"/>
+  <text x="895" y="593" class="badge" text-anchor="middle">PARTIAL</text>
+  <text x="560" y="616" class="st">Port 4000 · helmet · cors · morgan · LangChain</text>
+  <text x="560" y="652" class="b">Live endpoints</text>
+  <text x="560" y="672" class="p">POST /api/educator/chat  →  Gemini 2.0 Flash</text>
+  <text x="560" y="692" class="p">GET /api/educator · /api/educationHub (health)</text>
+  <text x="560" y="728" class="b">Auth</text>
+  <text x="560" y="748" class="p">Firebase Admin SDK + requireAuth middleware</text>
+  <text x="560" y="768" class="p">(verifies ID tokens; not applied to routes yet)</text>
+  <text x="560" y="804" class="b">Not mounted yet</text>
+  <text x="560" y="824" class="p">donate · repair · lifecycle routers (commented out)</text>
+
+  <!-- Node -> Firebase -->
+  <line x1="540" y1="710" x2="462" y2="710" class="dash" marker-end="url(#ahd)"/>
+  <text x="501" y="700" class="p13" text-anchor="middle" font-size="12">Admin SDK</text>
+
+  <!-- Flask -->
+  <rect x="1040" y="560" width="700" height="300" rx="16" fill="#EDE7F6" stroke="#5E35B1" stroke-width="2.5"/>
+  <text x="1060" y="594" class="t">Flask AI backend  (ai_backend/)</text>
+  <rect x="1596" y="578" width="124" height="22" rx="11" fill="#5E35B1"/>
+  <text x="1658" y="593" class="badge" text-anchor="middle">PRIMARY API</text>
+  <text x="1060" y="616" class="st">Port 5000 · Flask 3 · flask-cors · LangChain · prompt templates</text>
+
+  <rect x="1060" y="632" width="660" height="62" rx="10" fill="#fff" stroke="#9575CD" stroke-width="1.5"/>
+  <text x="1076" y="655" class="b">/api/educator_chat</text>
+  <text x="1076" y="676" class="p">POST /chat { question }  →  Gemini answer, plain text, eco topics only</text>
+
+  <rect x="1060" y="702" width="660" height="98" rx="10" fill="#fff" stroke="#9575CD" stroke-width="1.5"/>
+  <text x="1076" y="725" class="b">/api/posts</text>
+  <text x="1076" y="745" class="p">GET /all · /search?search= · /post/{id} · /author/{id}</text>
+  <text x="1076" y="765" class="p">POST /create  →  bearer check → Gemini moderation → S3 upload → Supabase insert</text>
+  <text x="1076" y="785" class="p">POST /like/{id} · /unlike/{id} · /is_liked/{id}   (likes stored in Supabase)</text>
+
+  <rect x="1060" y="808" width="660" height="40" rx="10" fill="#F3EFFA" stroke="#B39DDB" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <text x="1076" y="833" class="p">/api/rag_service — stub (health response only, RAG not built yet)</text>
+
+  <!-- ===================== ARROWS BACKENDS -> PROVIDERS ===================== -->
+  <line x1="800" y1="860" x2="800" y2="1018" class="dash" marker-end="url(#ahd)"/>
+  <text x="812" y="948" class="lbl">LangChain · chat</text>
+
+  <line x1="1100" y1="860" x2="1100" y2="1018" class="solid" marker-end="url(#ah)"/>
+  <text x="1112" y="948" class="lbl">LangChain · chat</text>
+  <text x="1112" y="966" class="lbl">+ moderation</text>
+
+  <line x1="1330" y1="860" x2="1330" y2="1018" class="solid" marker-end="url(#ah)"/>
+  <text x="1342" y="948" class="lbl">supabase-py</text>
+
+  <line x1="1620" y1="860" x2="1620" y2="1018" class="solid" marker-end="url(#ah)"/>
+  <text x="1632" y="948" class="lbl">boto3 upload</text>
+
+  <!-- ===================== TIER 3: PROVIDERS ===================== -->
+  <text x="60" y="1006" class="tier">DATA &amp; AI PROVIDERS</text>
+
+  <!-- Legend -->
+  <rect x="60" y="1020" width="640" height="180" rx="14" fill="#FAFAFA" stroke="#CFD8DC" stroke-width="2"/>
+  <text x="80" y="1050" class="b">How to read this diagram</text>
+  <line x1="80" y1="1078" x2="150" y2="1078" class="solid" marker-end="url(#ah)"/>
+  <text x="166" y="1083" class="p">Connection used by the app today</text>
+  <line x1="80" y1="1108" x2="150" y2="1108" class="dash" marker-end="url(#ahd)"/>
+  <text x="166" y="1113" class="p">Built or planned, not wired to the app screens yet</text>
+  <text x="80" y="1146" class="p13">Data owned by Firebase: users, items, listings, shops (mobile-first data).</text>
+  <text x="80" y="1166" class="p13">Data owned by Supabase + S3: Education Hub posts, likes and images.</text>
+  <text x="80" y="1186" class="p13">Gemini is called only from servers; the app never holds the Gemini key.</text>
+
+  <!-- Gemini -->
+  <rect x="760" y="1020" width="380" height="180" rx="14" fill="#E8EAF6" stroke="#3949AB" stroke-width="2.5"/>
+  <text x="780" y="1054" class="t">Google Gemini</text>
+  <text x="780" y="1076" class="st">via langchain-google-genai (model from env)</text>
+  <text x="780" y="1112" class="b">Used for</text>
+  <text x="780" y="1134" class="p">•  Educator chatbot answers (eco topics)</text>
+  <text x="780" y="1154" class="p">•  Post moderation: APPROVED / REJECTED</text>
+  <text x="780" y="1174" class="p">    with a short reason</text>
+
+  <!-- Supabase -->
+  <rect x="1200" y="1020" width="260" height="180" rx="14" fill="#E0F2F1" stroke="#00897B" stroke-width="2.5"/>
+  <text x="1220" y="1054" class="t">Supabase</text>
+  <text x="1220" y="1076" class="st">Hosted Postgres</text>
+  <text x="1220" y="1112" class="b">Tables</text>
+  <text x="1220" y="1134" class="p">posts  (title, content,</text>
+  <text x="1220" y="1152" class="p">image url, author, like_count)</text>
+  <text x="1220" y="1174" class="p">post_likes  (post_id, user_id)</text>
+
+  <!-- S3 -->
+  <rect x="1500" y="1020" width="240" height="180" rx="14" fill="#FFF8E1" stroke="#F9A825" stroke-width="2.5"/>
+  <text x="1520" y="1054" class="t">AWS S3</text>
+  <text x="1520" y="1076" class="st">Object storage</text>
+  <text x="1520" y="1112" class="b">Holds</text>
+  <text x="1520" y="1134" class="p">Education Hub cover images</text>
+  <text x="1520" y="1154" class="p">Public URL is saved on the</text>
+  <text x="1520" y="1174" class="p">post row in Supabase</text>
+
+  <text x="60" y="1244" class="st">Source: EcoLoop/ (Expo app) · server/ (Node) · ai_backend/ (Flask). Editable source of this image: docs/architecture.svg</text>
+</svg>
